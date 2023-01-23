@@ -77,7 +77,7 @@ export class SecuritySystemTargetAccessory
 
 			await promisify(global.setTimeout)(keyDelay);
 		}
-
+		this.platform.connection.write(Request.yes);
 		this.platform.connection.write(Request.panelStatus);
 	}
 
